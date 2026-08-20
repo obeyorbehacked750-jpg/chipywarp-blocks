@@ -585,3 +585,23 @@ Blockly.Blocks['motion_yscroll'] = {
     });
   }
 };
+
+Blockly.Blocks['motion_pointtowardsxy'] = {
+    init: function () {
+        this.jsonInit({
+            "message0": "point towards x: %1 y: %2",
+            "args0": [
+                {
+                    "type": "input_value",
+                    "name": "X"
+                },
+                {
+                    "type": "input_value",
+                    "name": "Y"
+                }
+            ],
+            "category": Blockly.Categories.motion,
+            "extensions": ["colours_motion", "shape_statement"]
+        });
+    }
+};
