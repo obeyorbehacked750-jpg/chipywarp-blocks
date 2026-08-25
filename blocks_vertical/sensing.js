@@ -115,6 +115,26 @@ Blockly.Blocks['sensing_coloristouchingcolor'] = {
   }
 };
 
+Blockly.Blocks['sensing_coloratxy'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "color at x: %1 y: %2",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "X"
+        },
+        {
+          "type": "input_value",
+          "name": "Y"
+        }
+      ],
+      "category": Blockly.Categories.sensing,
+      "extensions": ["colours_sensing", "output_string"]
+    });
+  }
+};
+
 Blockly.Blocks['sensing_distanceto'] = {
   /**
    * Block to Report distance to another Object.
