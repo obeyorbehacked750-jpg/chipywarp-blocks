@@ -101,6 +101,58 @@ Blockly.Blocks['data_changevariableby'] = {
   }
 };
 
+Blockly.Blocks['data_getdynamicvar'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "get variable %1",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "VAR_NAME"
+        }
+      ],
+      "category": Blockly.Categories.data,
+      "extensions": ["colours_data", "output_string"]
+    });
+  }
+};
+
+Blockly.Blocks['data_createdynamicvar'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "create/set variable %1 to %2",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "VAR_NAME"
+        },
+        {
+          "type": "input_value",
+          "name": "VALUE"
+        }
+      ],
+      "category": Blockly.Categories.data,
+      "extensions": ["colours_data", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['data_resetdynamicvar'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "reset variable %1",
+      "args0": [
+        {
+          "type": "field_variable",
+          "name": "VAR_NAME"
+        }
+      ],
+      "category": Blockly.Categories.data,
+      "extensions": ["colours_data", "shape_statement"]
+    });
+  }
+};
+
 Blockly.Blocks['data_showvariable'] = {
   /**
    * Block to show a variable
