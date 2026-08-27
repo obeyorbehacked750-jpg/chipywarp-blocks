@@ -143,7 +143,7 @@ Blockly.Blocks['data_resetdynamicvar'] = {
       "message0": "reset variable %1",
       "args0": [
         {
-          "type": "field_variable",
+          "type": "input_value",
           "name": "VAR_NAME"
         }
       ],
